@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS tourdates CASCADE;
+
+CREATE TABLE tourdates (
+	id SERIAL PRIMARY KEY,
+	tourdate DATE,
+	city VARCHAR(255),
+	venue VARCHAR(255),
+	bands VARCHAR(255),
+	link VARCHAR(255)
+);
