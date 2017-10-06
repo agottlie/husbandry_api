@@ -4,7 +4,7 @@ function findAll() {
 	return db.manyOrNone(`SELECT * FROM tourdates`);
 }
 function find6() {
-	return db.manyOrNone(`SELECT * FROM tourdates ORDER BY tourdate ASC LIMIT 6`);
+	return db.manyOrNone(`SELECT * FROM tourdates ORDER BY tourdate DESC LIMIT 6`);
 }
 function create (tourdate, city, venue, bands, link) {
 	return db.one(`INSERT INTO tourdates (tourdate, city, venue, bands, link) VALUES ($1, $2, $3, $4, $5) RETURNING *`, [tourdate, city, venue, bands, link]);
